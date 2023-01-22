@@ -13,6 +13,18 @@
     ]
   },
   "storage": {
+    "directories": [
+      {
+        "group": {
+          "name": "core"
+        },
+        "path": "/home/core/sftp",
+        "user": {
+          "name": "core"
+        },
+        "mode": 420
+      }
+    ],
     "files": [
       {
         "path": "/etc/hostname",
