@@ -16,6 +16,7 @@
     "files": [
       {
         "path": "/etc/hostname",
+        "overwrite": true,
         "contents": {
           "compression": "",
           "source": "data:,lab01"
@@ -23,7 +24,8 @@
         "mode": 420
       },
       {
-        "path": "/sftp_sshkey/id_ecdsa",
+        "path": "/home/core/sftp/id_ecdsa",
+        "overwrite": true,
         "contents": {
           "compression": "",
           "source": "data:,ecdsa-sha2-nistp521%20AAAAE2VjZHNhLXNoYTItbmlzdHA1MjEAAAAIbmlzdHA1MjEAAACFBACAlP1rzNQCyNWa%2Bi%2FC338LktBDBmR7mUtQY4chYQ5ionvIsG2QGiXy3BqMGrJvRS8VUlq0clyMENf4DB2xbn%2B2bQEeF4FuDYsyfeXQIquhkektwZU5i2ID6QZvhfjOhLiBe9gYNfb6UjHhXnhBhm9SvkagqzIYzZ%2BcBaJzkejBHd4UvQ%3D%3D"
