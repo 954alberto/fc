@@ -44,10 +44,10 @@
         },
         "mode": 420,
         "group": {
-          "name": "core"
+          "id": 1000
         },
         "user": {
-          "name": "core"
+          "id": 1000
         }
       }
     ]
