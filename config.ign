@@ -1,0 +1,35 @@
+{
+  "ignition": {
+    "version": "3.3.0"
+  },
+  "passwd": {
+    "users": [
+      {
+        "name": "core",
+        "sshAuthorizedKeys": [
+          "ecdsa-sha2-nistp521 AAAAE2VjZHNhLXNoYTItbmlzdHA1MjEAAAAIbmlzdHA1MjEAAACFBAG/EsgPcqVoEgq3lSE8RCZIsSqbSHFE9fE8EcNdi1zcvT9WdFpwvN02GUyz47NeNSIG5USiH8fvQt3PN3IAzSL5CwALVCh62kYoLCh3gI1l7c25VQI1eQXb6IeVN7nEjDV3bQJq7KcALP3vYjUCt/UZJPtXeuuBGuWMEYwJzFnMRo4Asg=="
+        ]
+      }
+    ]
+  },
+  "storage": {
+    "files": [
+      {
+        "path": "/etc/hostname",
+        "contents": {
+          "compression": "",
+          "source": "data:,lab01"
+        },
+        "mode": 420
+      },
+      {
+        "path": "/sftp_sshkey/id_ecdsa",
+        "contents": {
+          "compression": "",
+          "source": "data:,ecdsa-sha2-nistp521%20AAAAE2VjZHNhLXNoYTItbmlzdHA1MjEAAAAIbmlzdHA1MjEAAACFBACAlP1rzNQCyNWa%2Bi%2FC338LktBDBmR7mUtQY4chYQ5ionvIsG2QGiXy3BqMGrJvRS8VUlq0clyMENf4DB2xbn%2B2bQEeF4FuDYsyfeXQIquhkektwZU5i2ID6QZvhfjOhLiBe9gYNfb6UjHhXnhBhm9SvkagqzIYzZ%2BcBaJzkejBHd4UvQ%3D%3D"
+        },
+        "mode": 420
+      }
+    ]
+  }
+}
