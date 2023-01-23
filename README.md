@@ -16,3 +16,11 @@ docker run \
 -v /home/core/sftp/input:/home/foo/share \
 -p 2222:22 -d atmoz/sftp \
 foo::1001
+
+## SOURCES
+
+https://coreos.github.io/ignition/configuration-v3_4_experimental/
+
+https://coreos.github.io/ignition/examples/
+
+https://docs.fedoraproject.org/en-US/fedora-coreos/provisioning-virtualbox/
