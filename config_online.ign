@@ -1,0 +1,10 @@
+{
+  "ignition": {
+    "config": {
+      "replace": {
+        "source": "https://raw.githubusercontent.com/954alberto/fc/main/config.ign"
+      }
+    },
+    "version": "3.3.0"
+  }
+}
