@@ -42,6 +42,7 @@ storage:
       group:
         id: 0
     - path: /etc/selinux/config
+      overwrite: true
       contents:
         local: /etc/selinux/config
       mode: 0644

@@ -79,6 +79,7 @@
         "group": {
           "id": 0
         },
+        "overwrite": true,
         "path": "/etc/selinux/config",
         "user": {
           "id": 0
