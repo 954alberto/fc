@@ -9,6 +9,14 @@ storage:
   directories:
     - path: /root/sshkey
   files:
+    - path: /etc/hostname
+      contents:
+        local: /etc/hostname
+      mode: 0600
+      user:
+        id: 0
+      group:
+        id: 0
     - path: /root/sshkey/ssh_host_ed25519_key
       contents:
         local: /root/sshkey/ssh_host_ed25519_key

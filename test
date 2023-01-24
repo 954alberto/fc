@@ -23,6 +23,20 @@
         "group": {
           "id": 0
         },
+        "path": "/etc/hostname",
+        "user": {
+          "id": 0
+        },
+        "contents": {
+          "compression": "",
+          "source": "data:,lab01"
+        },
+        "mode": 384
+      },
+      {
+        "group": {
+          "id": 0
+        },
         "path": "/root/sshkey/ssh_host_ed25519_key",
         "user": {
           "id": 0
@@ -94,7 +108,7 @@
         "path": "/etc/systemd/system/docker.sftp.service",
         "contents": {
           "compression": "gzip",
-          "source": "data:;base64,H4sIAAAAAAAC/5SRwU4CMRCG732KXjiyhU04uMkeNHrwZkDjAQkpu7Nus922zkyR9enNCkQECXpqO/83X6aZ+ZMzvBC3QAWawMa7nCoOkgDXpgBxXTFgXvqiAUz2xSm8RYNAx3Uxn21vC/FoWvCRZ6yRZ1DkIzEF6h+5tu+6I3G3geIrfUDIhyoSqpVxamuUsIFCDpwk9uECiq0cuJ/MMRKitVJz6z9U/7lM22AcfPecNGB08kVIKeVwLRV6z4qobqDrj2XtiZdQppPJ+GrZQJcp4KJPfk0viZD0Gcku+cckSYirTNW+BVV5r5Je10BH52H0f5zvsvoQPNXGYL0uDwxUa4Q9FWSapmmWpnJYHmxqF1feZ9l4NBoLMb93xNrahXjWjqG86fISKh0tJ6zxFVh8BgAA//8gNVwk0gIAAA=="
+          "source": "data:;base64,H4sIAAAAAAAC/5SRMW/yMBCGd/8KL4zEEInhi5Thq9qhWwVUHShCJrk0VhzbvTtT0l9fpYBKoYh2sn3vc4/OusWjM7wUt0AFmsDGu5wqDpIAN6YA8b9iwLz0RQOYHIpTeI0GgU7rYjHb3ZZi3gXITWlBzE0LPvKMNfIMinwkpkD9I9f2TXck7rZQfKYPCPlQRUK1Nk7t3BK2UMiBk8Q+XEGxlQP3nTlFQrRWam79u+q/mWkbjIOvnrMGjE4+CymlHG6kQu9ZEdUNdP2xqj3xCsp0Mhn/WzXQZQq46JMf02siJH1Bsk/+MEkS4jpTtW9BVd6rpNc10NFlGP0v57uuPgbPtTFYr8sjA9Ua4UAFmaZpmqWpHJZHm9rHlfdZNh6NxkIs7h2xtnYpnrRjKG+6vIRKR8sJa3wBFh8BAAD//73evtjcAgAA"
         }
       }
     ]
