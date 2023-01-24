@@ -1,0 +1,22 @@
+[Unit]
+Description=sftp service
+After=docker.service
+Requires=docker.service
+
+[Service]
+TimeoutStartSec=0
+Restart=always
+ExecStartPre=-/usr/bin/docker exec %n stop
+ExecStartPre=-/usr/bin/docker rm %n
+ExecStartPre=/usr/bin/docker pull atmoz/sftp:alpine
+ExecStart=/usr/bin/docker run \
+    -v /root/sshkey/ssh_host_ed25519_key:/etc/ssh/ssh_host_ed25519_key \
+    -v /root/sshkey/ssh_host_rsa_key:/etc/ssh/ssh_host_rsa_key \
+    -v /root/sshkey/ssh_host_ed25519_key.pub:/home/foo/.ssh/keys/ssh_host_ed25519_key.pub:ro \
+    -v /root/sshkey/ssh_host_rsa_key.pub:/home/foo/.ssh/keys/ssh_host_rsa_key.pub:ro \
+    -v /root/upload:/home/foo/share \
+    -p 2222:22 -d atmoz/sftp \
+    foo::1001
+
+[Install]
+WantedBy=default.target
