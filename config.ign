@@ -109,7 +109,7 @@
         "path": "/etc/systemd/system/docker.sftp.service",
         "contents": {
           "compression": "gzip",
-          "source": "data:;base64,H4sIAAAAAAAC/5SRMW/yMBCGd/8KL4zEEInhi5Thq9qhWwVUHShCJrk0VhzbvTtT0l9fpYBKoYh2sn3vc4/OusWjM7wUt0AFmsDGu5wqDpIAN6YA8b9iwLz0RQOYHIpTeI0GgU7rYjHb3ZZi3gXITWlBzE0LPvKMNfIMinwkpkD9I9f2TXck7rZQfKYPCPlQRUK1Nk7t3BK2UMiBk8Q+XEGxlQP3nTlFQrRWam79u+q/mWkbjIOvnrMGjE4+CymlHG6kQu9ZEdUNdP2xqj3xCsp0Mhn/WzXQZQq46JMf02siJH1Bsk/+MEkS4jpTtW9BVd6rpNc10NFlGP0v57uuPgbPtTFYr8sjA9Ua4UAFmaZpmqWpHJZHm9rHlfdZNh6NxkIs7h2xtnYpnrRjKG+6vIRKR8sJa3wBFh8BAAD//73evtjcAgAA"
+          "source": "data:;base64,H4sIAAAAAAAC/4ySwW7iMBCGX8UXjokhEoeNlMOutofeqtKqB4KQSSaNFcfjzowp6dNXgaqKoIieEvv/v8+27PWzt7Ip/X/gimwQi77gRoJioL2toPR/GwEqaqw6oPR79hHeoiXgi6D069Xpf1P6J9sDRlmJIVlBVcxHkMdRYdy7Gbj0dweojvkDQZHoyKR31uuTVsEBKjXzigXDrS71aubPSuedEJ1TRnr80OMpc+OC9TCBLgiKXiV7pQlRNHPbwTB+ti2ybKHOlsvFn20HQ65BqjH5Mb2uIDZX8K/kV6unIe5y3WIPukHU6SjqYODrZcKbe7otnRanwhgcmnrCcmsIVBJUlmVZnmUqqSfXoBrEPF/M54vj+7n3LMa5TelfjBeo/w1FDY2JTlIx9AryGQAA//8/xc6ctQIAAA=="
         }
       }
     ]
@@ -117,7 +117,7 @@
   "systemd": {
     "units": [
       {
-        "contents": "",
+        "contents": "[Unit]\nDescription=sftp service\nAfter=docker.service\nRequires=docker.service\n\n[Service]\nTimeoutStartSec=0\nRestart=always\nExecStartPre=-/usr/bin/docker exec %n stop\nExecStartPre=-/usr/bin/docker rm %n\nExecStartPre=/usr/bin/docker pull atmoz/sftp:alpine\nExecStart=/usr/bin/docker run -v /root/sshkey/ssh_host_ed25519_key:/etc/ssh/ssh_host_ed25519_key -v /root/sshkey/ssh_host_rsa_key:/etc/ssh/ssh_host_rsa_key -v /root/sshkey/ssh_host_ed25519_key.pub:/home/foo/.ssh/keys/ssh_host_ed25519_key.pub:ro -v /root/sshkey/ssh_host_rsa_key.pub:/home/foo/.ssh/keys/ssh_host_rsa_key.pub:ro -v /root/upload:/home/foo/share -p 2222:22 -d atmoz/sftp foo::1001\n\n[Install]\nWantedBy=default.target",
         "enabled": true,
         "name": "docker.sftp.service"
       }
