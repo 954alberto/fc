@@ -76,12 +76,12 @@
         "mode": 420
       },
       {
-        "group": {
+        "path": "/etc/selinux/config",
+        "overwrite": true,
+        "user": {
           "id": 0
         },
-        "overwrite": true,
-        "path": "/etc/selinux/config",
-        "user": {
+        "group": {
           "id": 0
         },
         "contents": {
