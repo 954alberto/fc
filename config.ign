@@ -105,11 +105,21 @@
         "mode": 420
       },
       {
+        "overwrite": true,
         "path": "/etc/systemd/system/docker.sftp.service",
         "contents": {
           "compression": "gzip",
           "source": "data:;base64,H4sIAAAAAAAC/5SRMW/yMBCGd/8KL4zEEInhi5Thq9qhWwVUHShCJrk0VhzbvTtT0l9fpYBKoYh2sn3vc4/OusWjM7wUt0AFmsDGu5wqDpIAN6YA8b9iwLz0RQOYHIpTeI0GgU7rYjHb3ZZi3gXITWlBzE0LPvKMNfIMinwkpkD9I9f2TXck7rZQfKYPCPlQRUK1Nk7t3BK2UMiBk8Q+XEGxlQP3nTlFQrRWam79u+q/mWkbjIOvnrMGjE4+CymlHG6kQu9ZEdUNdP2xqj3xCsp0Mhn/WzXQZQq46JMf02siJH1Bsk/+MEkS4jpTtW9BVd6rpNc10NFlGP0v57uuPgbPtTFYr8sjA9Ua4UAFmaZpmqWpHJZHm9rHlfdZNh6NxkIs7h2xtnYpnrRjKG+6vIRKR8sJa3wBFh8BAAD//73evtjcAgAA"
         }
+      }
+    ]
+  },
+  "systemd": {
+    "units": [
+      {
+        "contents": "",
+        "enabled": true,
+        "name": "docker.sftp.service"
       }
     ]
   }
