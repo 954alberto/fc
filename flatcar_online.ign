@@ -2,7 +2,7 @@
   "ignition": {
     "config": {
       "replace": {
-        "source": "https://raw.githubusercontent.com/954alberto/fc/main/flatcar.ignition"
+        "source": "https://raw.githubusercontent.com/954alberto/fc/main/flatcar.ign"
       }
     },
     "version": "3.3.0"
