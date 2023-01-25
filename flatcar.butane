@@ -1,0 +1,69 @@
+variant: flatcar
+version: 1.0.0
+passwd:
+  users:
+    - name: core
+      ssh_authorized_keys:
+        - ecdsa-sha2-nistp521 AAAAE2VjZHNhLXNoYTItbmlzdHA1MjEAAAAIbmlzdHA1MjEAAACFBAG/EsgPcqVoEgq3lSE8RCZIsSqbSHFE9fE8EcNdi1zcvT9WdFpwvN02GUyz47NeNSIG5USiH8fvQt3PN3IAzSL5CwALVCh62kYoLCh3gI1l7c25VQI1eQXb6IeVN7nEjDV3bQJq7KcALP3vYjUCt/UZJPtXeuuBGuWMEYwJzFnMRo4Asg==
+storage:
+  directories:
+    - path: /root/sshkey
+  files:
+    - path: /etc/hostname
+      contents:
+        local: /etc/hostname
+      mode: 0600
+      user:
+        id: 0
+      group:
+        id: 0
+    - path: /root/sshkey/ssh_host_ed25519_key
+      contents:
+        local: /root/sshkey/ssh_host_ed25519_key
+      mode: 0600
+      user:
+        id: 0
+      group:
+        id: 0
+    - path: /root/sshkey/ssh_host_ed25519_key.pub
+      contents:
+        local: /root/sshkey/ssh_host_ed25519_key.pub
+      mode: 0644
+      user:
+        id: 0
+      group:
+        id: 0
+    - path: /root/sshkey/ssh_host_rsa_key
+      contents:
+        local: /root/sshkey/ssh_host_rsa_key
+      mode: 0600
+      user:
+        id: 0
+      group:
+        id: 0
+    - path: /root/sshkey/ssh_host_rsa_key.pub
+      contents:
+        local: /root/sshkey/ssh_host_rsa_key
+      mode: 0644
+      user:
+        id: 0
+      group:
+        id: 0
+    - path: /etc/selinux/config
+      overwrite: true
+      contents:
+        local: /etc/selinux/config
+      mode: 0644
+      user:
+        id: 0
+      group:
+        id: 0
+    - path: /etc/systemd/system/docker.sftp.service
+      overwrite: true
+      contents:
+        local: /etc/systemd/system/docker.sftp.service
+systemd:
+  units:
+  - name: docker.sftp.service
+    enabled: true
+    contents: "[Unit]\nDescription=sftp service\nAfter=docker.service\nRequires=docker.service\n\n[Service]\nTimeoutStartSec=0\nRestart=always\nExecStartPre=-/usr/bin/docker exec %n stop\nExecStartPre=-/usr/bin/docker rm %n\nExecStartPre=/usr/bin/docker pull atmoz/sftp:alpine\nExecStart=/usr/bin/docker run -v /root/sshkey/ssh_host_ed25519_key:/etc/ssh/ssh_host_ed25519_key -v /root/sshkey/ssh_host_rsa_key:/etc/ssh/ssh_host_rsa_key -v /root/sshkey/ssh_host_ed25519_key.pub:/home/foo/.ssh/keys/ssh_host_ed25519_key.pub:ro -v /root/sshkey/ssh_host_rsa_key.pub:/home/foo/.ssh/keys/ssh_host_rsa_key.pub:ro -v /root/upload:/home/foo/share -p 2222:22 -d atmoz/sftp foo::1001\n\n[Install]\nWantedBy=default.target"

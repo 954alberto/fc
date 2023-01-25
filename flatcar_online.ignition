@@ -1,0 +1,10 @@
+{
+  "ignition": {
+    "config": {
+      "replace": {
+        "source": "https://raw.githubusercontent.com/954alberto/fc/main/flatcar.ignition"
+      }
+    },
+    "version": "3.3.0"
+  }
+}

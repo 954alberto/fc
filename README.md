@@ -1,9 +1,10 @@
 # AGENT SMITH
 
 ## SET UP VM ON VBOX
+OVA_NAME=flatcar.ova   #fedora-coreos-37.20221225.3.0-virtualbox.x86_64.ova
 VM_NAME=my-instance
 IGN_PATH="./config_online.ign"
-VBoxManage import --vsys 0 --vmname "$VM_NAME" fedora-coreos-37.20221225.3.0-virtualbox.x86_64.ova && \
+VBoxManage import --vsys 0 --vmname "$VM_NAME" "$OVA_NAME" && \
 VBoxManage guestproperty set "$VM_NAME" /Ignition/Config "$(cat $IGN_PATH)" && \
 VBoxManage modifyvm "$VM_NAME" --natpf1 "guestssh,tcp,,2222,,22" && \
 VBoxManage startvm "$VM_NAME"
@@ -65,3 +66,7 @@ ExecStart=/usr/bin/docker run --rm --name %n \
 WantedBy=default.target
 ```
 
+## Connect SFTP
+```bash
+sftp -o "StrictHostKeyChecking no" -i /root/sshkey/ssh_host_ed25519_key -P 2222 foo@localhost
+```

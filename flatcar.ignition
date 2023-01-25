@@ -1,0 +1,126 @@
+{
+  "ignition": {
+    "version": "3.3.0"
+  },
+  "passwd": {
+    "users": [
+      {
+        "name": "core",
+        "sshAuthorizedKeys": [
+          "ecdsa-sha2-nistp521 AAAAE2VjZHNhLXNoYTItbmlzdHA1MjEAAAAIbmlzdHA1MjEAAACFBAG/EsgPcqVoEgq3lSE8RCZIsSqbSHFE9fE8EcNdi1zcvT9WdFpwvN02GUyz47NeNSIG5USiH8fvQt3PN3IAzSL5CwALVCh62kYoLCh3gI1l7c25VQI1eQXb6IeVN7nEjDV3bQJq7KcALP3vYjUCt/UZJPtXeuuBGuWMEYwJzFnMRo4Asg=="
+        ]
+      }
+    ]
+  },
+  "storage": {
+    "directories": [
+      {
+        "path": "/root/sshkey"
+      }
+    ],
+    "files": [
+      {
+        "group": {
+          "id": 0
+        },
+        "path": "/etc/hostname",
+        "user": {
+          "id": 0
+        },
+        "contents": {
+          "compression": "",
+          "source": "data:,lab01"
+        },
+        "mode": 384
+      },
+      {
+        "group": {
+          "id": 0
+        },
+        "path": "/root/sshkey/ssh_host_ed25519_key",
+        "user": {
+          "id": 0
+        },
+        "contents": {
+          "compression": "gzip",
+          "source": "data:;base64,H4sIAAAAAAAC/5yRu26DMBSGd54ie1Sp0BIlQ4cA5o65BBNgs6FtEjANmMTA01eOVKlLl37DL0s++vTrnCeBBiwHrsIIwMPBXkWJk+1TsPJA8fiVyIvWkg4uWJeHMm/G+gL2As1S74Qi8QSE7m5lvP9BExFwkeNSKZ9jeZTiGaZoCsWQrqeKRliAdJ3ZM90EeChd1rEzX5tKT3UDlqms4RarIxYS71Latq8qyTRL6/i39b9SSZQ2LKM5xYkvo3WHwwbmOdudMQdXvmA3scM75+7WWp4rtS2jwrzxKXY8/uGRr6kfGzq/z5JvvOa4L5xAbiNk9tlA5UH0c48mK2g219b2VtFdU9G2q4/Zxqf1qaLwWiANpUgNfKqy2JaSkVD+Jj32DaDx9y2+AwAA///fR/VusAEAAA=="
+        },
+        "mode": 384
+      },
+      {
+        "group": {
+          "id": 0
+        },
+        "path": "/root/sshkey/ssh_host_ed25519_key.pub",
+        "user": {
+          "id": 0
+        },
+        "contents": {
+          "compression": "",
+          "source": "data:,ssh-ed25519%20AAAAC3NzaC1lZDI1NTE5AAAAIJPYFuwxQIKwfKboxqtkmyeyLD4XaqYIM1lPUFqVrm1r%20alberto.rodriguez.garcia%40TMNL.nl%40tmnl%0A"
+        },
+        "mode": 420
+      },
+      {
+        "group": {
+          "id": 0
+        },
+        "path": "/root/sshkey/ssh_host_rsa_key",
+        "user": {
+          "id": 0
+        },
+        "contents": {
+          "compression": "gzip",
+          "source": "data:;base64,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"
+        },
+        "mode": 384
+      },
+      {
+        "group": {
+          "id": 0
+        },
+        "path": "/root/sshkey/ssh_host_rsa_key.pub",
+        "user": {
+          "id": 0
+        },
+        "contents": {
+          "compression": "gzip",
+          "source": "data:;base64,H4sIAAAAAAAC/5TXt47E2nIu4JxPsXPiounJDk5A733TZvTeuyaf/mK2pGwEaP6ogFrRwodC1f/7CcOLsvGPafGG60r/WI7s0x/+H5WP/u0CKcr06Wg8CQuvcdjtecvTP2FE/EwH76fk0+F9xDb9P2FommaF66fMnwyp9mwEjPrf1sXT9M/DiqcRbssLtRg0yG72a6ySpe9dVJTNlBWkqqCisyfMeFLCutZouggCExUAJlgV6UFzw7LG8nslYkh7fZPGmuRRSRHBw36025YX0UKR8mmytd47YeZu9ad8QFwtKclfhxAw2fl5aRbY1gtsz1BXhaFssZyVaqjmZe7elkP5OteSL19EuBpKG3/dLtWzF6Y+y040qbo5XAnUnYH5i/BJJK3EO8qn4kg2bhJ8DbJ86DwYElWJknipMaU5Nxzo8np7alBYPHRiS/bSaaS8R0DLXtd1Vbq0xWaAn17avuYeDO89s2iK328aSq17d5wcDa59nAfnO2gRdFV1UdSLunRjeZlxDCy1GFePUQfRvT0Pz5Dk6HJ7e6zPtsGRe0cBej9lTOmISuznR16PD10EHt0QnKpQb8cosVfzApwBE/YUPWkGnl8P6vHa0HiwtRrqpuPZ2XxFrGxp6OIILOI5Xmz9a3CtGqJmnHwXExqRPqQ0wBrAMYx+SgR6koPqe3+J+KemoLe8E2SE0203rnYorBU9DcWCkXfrwA8NPS+kqznqeEn7zeAQgJ23gK3MWBNNsjRONxmkiX4xp4D3WLMd/VVWjsrWQV7HIi5cjXTIFzPFC4kFZaKJkCbeVNwBqHj0WrtCY+Rl9Mc8pg8arraeDMz0hkJPlbfE6hnMCrw8oWa9KaaL1IzezT1pqYw5EK7DEEpg+yFdKQ3Dt25UOTL0Y1rKUGPSQuWJ/o+ygd9o/1028Bvtv8sGfqP9d9nAb7T/Lhv4jfbfZQO/0f67bOA32n+XDfxG+++ygd9o/1028BvtH9k0R9v/Nbxpm5Px2sQPbuw5kcp6MwmoL+2xXcjI1LyEvVgCB07mdzaZH/nl+p/ZkaMGtNO1zCuejUC1JFV5VXghc6UymeSpoZoFRSTknXxVaoliUzc9RhsB1Zv7RsNTtQSFFs4nvdPCqpuENCPY+jNJD/vYF1pOe7Kz03Uh9/jOD0KCF+RL6LvrcjSCrTOQViNtcWauTOEnCHefYxSmm2ZV3n0Ye3sox4C5ScsDD0+cC+OcWFbPBqZ4pD8RrxECg+I49QFymxpTu8OJKybRrSpDgRGR12sRFBTUMwg9aaIixEeURr8rcdRR1GLMSR5iGfvCUHQn9RRUOMAcU1HknJdbIeea5lXCfthF2G/YqFQL2lMl3tZKhUtEuVuyuZkgXxY123Nd3FUqfZPR0GT8DFAgRvXXp4EeSmL4dxhqKRLU7wo2SbzNL60NMF+LNx7peqt4ubg3QC6tirCkUxRIgFO6zKglAKsZo9MCVd783rBXIzxvREfktoxPW0AIJfKIYHNnNO7BeqtH62abd1RqdYJnnuNcBJYFCGEiAFm+OkFhrpo7te8Xfj+GhOwi2cU3aFZHFxS2lhhipJSs26oz33yWZoaQXiGu1Yale3WC8X3BALbaEuzIwia/bYde4fxpx3CQHUTEwUylVJsunQRWdrqUKWY+tk/RaM5DgoJNWp5j8haGMI8EnOYb85+vAdWmPqYL+AX5n/lr8zTiaT5r884Vtj3zYAEetavcBD39IhIZP4eXINUvRB2+bIgBTRnGV+UuYUhk2LjtpXRmc4Mp5hn0zCLGSXZpIuxFBh8acQ/SB1nya89GJnKZ1UL6j7MijAMsOlRenmZiLBW5oi4/fTPjghxGBtdK7HjMRHRVNuV18O5JT0U333PcigJ5TrUym9w1M88IDyBrsKVTk6OK43XzMvLRrl5JCxJaoiTULXOg0UMZ1f6++jLAyI9eeK9ZArG43H0/ia0CodMFASRbcg86MQz1m6sc9xAa2X3VeH3GyB29wV1lar2bwM036s1SuLPVM2nnuTJLr4Hv49iZZ0NhAWLxZc76pgl6PgoN78Z/fzCIDIVXyw4+t/p50SQkq+prRKC+makv4xadIyvJycb4FbU6DfQUxw4YARljf1CfjJRsVUUjG0uKMMMgB+7q0Z2+5I0Td4272e2+u3XCPwOcQzgcW2rMSReEAgIjamCkReKSleyhj8XZ7OOFlDfMKN9ef1sbfanRno2CcKxD4p20ibBLUs7NrcW0EEHE0pkB4GIfubZWPUG+yJvxTsnu5PAl0G9CQ95SCiNzxmhd9sWWqOopvQ2KD/sM1mNadrRhcG8ggWpHAGXSMVzD6JvxWtaSss5rk/OA1POVUS8FV20ebLvEmz/yvtbcGkF3MhW5S+3S1GK5WnlQeJoaMOuSVIZDvCELk1f/Ls02T6MsNHXI2ygoNPF33ZNY8EP1vWJX6szZbc9Osch4FgheE/XlVhYQlmRGhIzJ28it1aLVJl8UlfyxvqP0nURkbo/cIsSoyHZvDHdE00vpszKovtQyBy3fY8I7qgA4l+D8m0RdyW1a//UVwc5jyl4xsYgGqX6KIi6tNsHEyYibd/+GX55fedi0rvTguq7h3fPt78An4Dj7LBjZbxkP8trBlLO9DDnznb5rr82IoWnfrmKaJFcFBtvANRnuWuyPYEsf/mAwGmelC9DyolnVTWfKk5R4ZkZVx8CxZQU5mvqC3MfSP4Ty6Q0mg0sErxihzBveQxsrczaHrPsJg1l0B0hBt9bkeVN11Z4/glm/TkWlz0bn1EbljCVljlG/Lxp8jEKlTQKB9nnY/LD4kfIMlAb4RtuAzDH0f/4D/HsV8Qb3v19M/z8AAP//02DkkFYNAAA="
+        },
+        "mode": 420
+      },
+      {
+        "group": {
+          "id": 0
+        },
+        "overwrite": true,
+        "path": "/etc/selinux/config",
+        "user": {
+          "id": 0
+        },
+        "contents": {
+          "compression": "",
+          "source": "data:,SELINUX%3Ddisabled%0ASELINUXTYPE%3Dtargeted%0A"
+        },
+        "mode": 420
+      },
+      {
+        "overwrite": true,
+        "path": "/etc/systemd/system/docker.sftp.service",
+        "contents": {
+          "compression": "gzip",
+          "source": "data:;base64,H4sIAAAAAAAC/4ySwW7iMBCGX8UXjokhEoeNlMOutofeqtKqB4KQSSaNFcfjzowp6dNXgaqKoIieEvv/v8+27PWzt7Ip/X/gimwQi77gRoJioL2toPR/GwEqaqw6oPR79hHeoiXgi6D069Xpf1P6J9sDRlmJIVlBVcxHkMdRYdy7Gbj0dweojvkDQZHoyKR31uuTVsEBKjXzigXDrS71aubPSuedEJ1TRnr80OMpc+OC9TCBLgiKXiV7pQlRNHPbwTB+ti2ybKHOlsvFn20HQ65BqjH5Mb2uIDZX8K/kV6unIe5y3WIPukHU6SjqYODrZcKbe7otnRanwhgcmnrCcmsIVBJUlmVZnmUqqSfXoBrEPF/M54vj+7n3LMa5TelfjBeo/w1FDY2JTlIx9AryGQAA//8/xc6ctQIAAA=="
+        }
+      }
+    ]
+  },
+  "systemd": {
+    "units": [
+      {
+        "contents": "[Unit]\nDescription=sftp service\nAfter=docker.service\nRequires=docker.service\n\n[Service]\nTimeoutStartSec=0\nRestart=always\nExecStartPre=-/usr/bin/docker exec %n stop\nExecStartPre=-/usr/bin/docker rm %n\nExecStartPre=/usr/bin/docker pull atmoz/sftp:alpine\nExecStart=/usr/bin/docker run -v /root/sshkey/ssh_host_ed25519_key:/etc/ssh/ssh_host_ed25519_key -v /root/sshkey/ssh_host_rsa_key:/etc/ssh/ssh_host_rsa_key -v /root/sshkey/ssh_host_ed25519_key.pub:/home/foo/.ssh/keys/ssh_host_ed25519_key.pub:ro -v /root/sshkey/ssh_host_rsa_key.pub:/home/foo/.ssh/keys/ssh_host_rsa_key.pub:ro -v /root/upload:/home/foo/share -p 2222:22 -d atmoz/sftp foo::1001\n\n[Install]\nWantedBy=default.target",
+        "enabled": true,
+        "name": "docker.sftp.service"
+      }
+    ]
+  }
+}
